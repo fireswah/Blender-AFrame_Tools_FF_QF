@@ -2,7 +2,7 @@
 Blender tools for FastFuels and Quic-Fire
 
 ## **BlenderFastFuels**
-This python script used in Blender creates quad or tri faced terrain and rewrites a treelist with elevation data at each tree location that can be used for data in other programs (like Unreal Engine in my workflow).
+This Python (3) script used in Blender (4) creates quad or tri faced terrain and rewrites a treelist with elevation data at each tree location that can be used for data in other programs (like Unreal Engine in my workflow).
 To run in full, it requires two outputs from FastFuels as data:
 - FastFuels zarr array (contains the dem, elevations only)
 - treelist.csv (unmodified with silvedits, contains the tree location and other data, but not elevation)
