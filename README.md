@@ -30,7 +30,7 @@ If you just want ground created from the zarr array, comment out the following l
 + Press the Run Script button (looks like a play button at top)
 
 ### Writing A New Modified Treelist.csv After Editing
-After making edits to your fuels in Blender, you can run the WriteNewTreeListCSV.py script in the same Blender file.
+After making edits to your fuels in Blender, you can run the WriteNewTreeList.py script in the same Blender file.
 + Go back into scripting mode in your Blender file
 + Click on the New Text button (looks like a pages icon)
 + Paste the other script into the code window
