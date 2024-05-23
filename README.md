@@ -34,6 +34,7 @@ After making edits to your fuels in Blender, you can run the WriteNewTreeListCSV
 + Go back into scripting mode in your Blender file
 + Click on the New Text button (looks like a pages icon)
 + Paste the other script into the code window
++ Make sure you edit/update the two SETUP OPTIONS to match your data.
 + Run it
 
 This will produce a new .csv containing your modified treelist data.
