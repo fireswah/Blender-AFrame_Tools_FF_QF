@@ -42,5 +42,6 @@ Headers for this .csv are different because it will add the height for each tree
 ```
 '',SPCD,DIA_cm,HT_m,STATUSCD,CBH_m,CROWN_RADIUS_m,X_m,Y_m,Z_m,basal_tree_ft^2
 ```
-
+IMPORTANT:
+x, y, and z values on your exported .csv will be 3D space modified instead of lat/lon/elevation.  The intent of this script isn't to retain the original data, but rather for use in 3D visualization tools like AFrame, Unreal Engine, Unity, etc.  I may add an option later to retain the original lat/lon as well. 
 
