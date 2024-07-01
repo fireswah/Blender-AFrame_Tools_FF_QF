@@ -50,8 +50,6 @@ This is an AFrame DEMO component that
 + Reads a Blender modified (z enabled) treelist.csv.
 + Groups species of trees into a Three.js bufferattribute
 + Displays trees as a point.  The image is of a whole tree and is scaled according to the treelist data.  The tree images used are in the treeTextureAtlas.png file and the custom glsl shader changes the uv values to utilize the atlas.
-IMPORTANT:
-This is a demo and only accounts for a few species at this point.
 
 Include AFrame and the tree builder script in html:
 ```
@@ -66,4 +64,11 @@ Create an entity with the component added in html:
 ```
 <a-entity id="trees" position="0 0 0" tree-builder></a-entity>
 ```
+Download or create a 3 column, 2 row treeimageatlas and put in subfolder called 'images'
+This isn't setup yet as a selector on the component.  If creating, use 1024x1024 images in a 3 column x 2 row image.
 
+### Notes
+IMPORTANT:
+This is a demo and only accounts for a few species at this point.
+Images were rendered from Blender sapling high poly trees, eyeballed from photos on the web.
+Gimp to create image atlas of each image.
