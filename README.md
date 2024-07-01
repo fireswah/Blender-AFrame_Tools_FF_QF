@@ -1,5 +1,5 @@
-# **Blender_FF_QF**
-Blender tools for FastFuels and Quic-Fire
+# **Blender-AFrame_Tools_FF_QF**
+Blender and AFrame tools for FastFuels and Quic-Fire
 
 ## **BlenderFastFuels**
 This Python3 script used in Blender4+ :
@@ -44,4 +44,26 @@ Headers for this .csv are different because it will add the height for each tree
 ```
 IMPORTANT:
 x, y, and z values on your exported .csv will be 3D space modified instead of lat/lon/elevation.  The intent of this script isn't to retain the original data, but rather for use in 3D visualization tools like AFrame, Unreal Engine, Unity, etc.  I may add an option later to retain the original lat/lon as well. 
+
+##tree-builder-points.js
+This is an AFrame DEMO component that
++ Reads a Blender modified (z enabled) treelist.csv.
++ Groups species of trees into a Three.js bufferattribute
++ Displays trees as a point.  The image is of a whole tree and is scaled according to the treelist data.  The tree images used are in the treeTextureAtlas.png file and the custom glsl shader changes the uv values to utilize the atlas.
+IMPORTANT:
+This is a demo and only accounts for a few species at this point.
+
+Include AFrame and the tree builder script in html:
+```
+<script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+<script src="./scripts/tree-builder-points.js"></script>
+```
+Load your treelist.csv as an AFrame asset in html:
+```
+<a-asset-item id="treesheet" src="./data/ElDoradoUnreal.csv"></a-asset-item>  <!-- For now, don't change the treesheet id name -->
+```
+Create an entity with the component added in html:
+```
+<a-entity id="trees" position="0 0 0" tree-builder></a-entity>
+```
 
