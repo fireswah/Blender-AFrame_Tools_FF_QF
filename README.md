@@ -45,7 +45,7 @@ Headers for this .csv are different because it will add the height for each tree
 IMPORTANT:
 x, y, and z values on your exported .csv will be 3D space modified instead of lat/lon/elevation.  The intent of this script isn't to retain the original data, but rather for use in 3D visualization tools like AFrame, Unreal Engine, Unity, etc.  I may add an option later to retain the original lat/lon as well. 
 
-##tree-builder-points.js
+## **tree-builder-points.js**
 This is an AFrame DEMO component that
 + Reads a Blender modified (z enabled) treelist.csv.
 + Groups species of trees into a Three.js bufferattribute
