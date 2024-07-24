@@ -42,19 +42,21 @@ Headers for this .csv are different because it will add the height for each tree
 ```
 '',SPCD,DIA_cm,HT_m,STATUSCD,CBH_m,CROWN_RADIUS_m,X_m,Y_m,Z_m,basal_tree_ft^2
 ```
-IMPORTANT:
+### Notes:
 x, y, and z values on your exported .csv will be 3D space modified instead of lat/lon/elevation.  The intent of this script isn't to retain the original data, but rather for use in 3D visualization tools like AFrame, Unreal Engine, Unity, etc.  I may add an option later to retain the original lat/lon as well. 
 
-## **tree-builder-points.js**
+## **/AFrame Components/tree-builder-points-component.js**
 This is an AFrame DEMO component that
 + Reads a Blender modified (z enabled) treelist.csv.
-+ Groups species of trees into a Three.js bufferattribute
-+ Displays trees as a point.  The image is of a whole tree and is scaled according to the treelist data.  The tree images used are in the treeTextureAtlas.png file and the custom glsl shader changes the uv values to utilize the atlas.
++ Groups species of trees into separate Three.js points geometries.
++ If no species image path match exists, creates a random color points geometry for that species. (i.e. all Douglas Fir would be blue, etc.)  This will be random each time the scene is run right now.
++ Displays trees as a point.  The image is of a whole tree and is scaled according treelist data (Ht_m).  The tree images used are in the images folder.
++ Each species points has it's own glsl shader rather than using a texture atlas.
 
 Include AFrame and the tree builder script in html:
 ```
 <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
-<script src="./scripts/tree-builder-points.js"></script>
+<script src="./scripts/tree-builder-points-component.js"></script>
 ```
 Load your treelist.csv as an AFrame asset in html:
 ```
@@ -64,14 +66,12 @@ Create an entity with the component added in html:
 ```
 <a-entity id="trees" position="0 0 0" tree-builder></a-entity>
 ```
-Download or create a 3 column, 2 row treeimageatlas and put in subfolder called 'images'
-This isn't setup yet as a selector on the component.  If creating, use 1024x1024 images in a 3 column x 2 row image.
+Download (see /images below) or create a subfolder called images and place your own tree images in it.
 
 ### Notes
-IMPORTANT:
+The treelist must be "z-enabled".  See the Blender tools section if you need to create one.
 This is a demo and only accounts for a few species at this point.
 Images were rendered from Blender sapling high poly trees, eyeballed from photos on the web.
-Gimp to create image atlas of each image.
 
 ## **/images**
 This folder contains whole tree images for use with the AFrame tree-builder-points-component.js.  It is also intended to be a working test of filenames for tree species.
