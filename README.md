@@ -72,3 +72,13 @@ IMPORTANT:
 This is a demo and only accounts for a few species at this point.
 Images were rendered from Blender sapling high poly trees, eyeballed from photos on the web.
 Gimp to create image atlas of each image.
+
+## **/images**
+This folder contains whole tree images for use with the AFrame tree-builder-points-component.js.  It is also intended to be a working test of filenames for tree species.
+
+### How To Use
+Download the folder and place within your AFrame folder structure for a given scene.
+
+### Notes
+The ./image file path hard coded in the tree component.  If you change the name of the folder, you'll have to update the file paths for trees in the component as well.
+
