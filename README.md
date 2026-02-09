@@ -2,11 +2,14 @@
 Blender and AFrame tools for FastFuels
 
 ## **FastFuels To Blender**
-**NOTE:**
+**The FastFuels To Blender workflow represents an interim step in visualizing landscape and vegation domains, while the FastFuels system continues to work towards making the data available for all.  Eventually the data the script retrieves will be available as an export from the FastFuels user interface.**
+
+**NOTES:**
 - This script will not work with a fuelarray.zip from the QuicFire output files.  It is designed to work directly with the FastFuels API (https://api.fastfuels.silvxlabs.com/redoc)
 - You will need a FastFuels account: https://fastfuels.silvxlabs.com/
 - You will need a FastFuels personal API key with write access: https://docs.fastfuels.silvxlabs.com/home/
-- Youll need the two files in the FastFuels To Blender folder, where you will find a python script (.py) and Blender File (.blend).
+- You will need the two files in the FastFuels To Blender folder, where you will find a python script (.py) and Blender File (.blend).
+- The FastFuels system can do very large domains, however I recommend while using this workflow keeping domain size around the ~500 acre size.  Your mileage will vary with your computer's CPU and GPU capability    
 
 #### The Pyhton script:
 - Gets topography for your domain in geotiff format
