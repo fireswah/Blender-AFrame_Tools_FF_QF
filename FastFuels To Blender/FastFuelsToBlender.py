@@ -230,7 +230,7 @@ def getNaip( minLon, minLat, maxLon, maxLat, crs, nx, ny ):
     resp.raise_for_status()
     with open( "naip_5070_clip.png", "wb" ) as f:
         f.write( resp.content )
-    print( "NAIP imagery downloaded to your folder in EPSG:5070" )
+    print( f"NAIP imagery downloaded to your folder in EPSG: { crs }." )
     reviseTreelist()
 
 #Helper function for mapping each tree lat/lon to x/y in 3D space that matches domain.
@@ -366,5 +366,6 @@ def poll_process_status( url, interval=30, timeout=600, pollName='' ):
         time.sleep( interval )
     else:
         print( "Polling timed out. Process status unknown or not complete within the time limit." )
+
 
 getProjectID()
