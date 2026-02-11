@@ -25,7 +25,7 @@ Blender and AFrame tools for FastFuels
 - The Trees Nodes import the adjusted treelist.csv, raycasts them against the terrain mesh, and places a 3D object at each tree based on the data.  "Live" trees will be displayed as green, and "dead" trees will be displayed in gray. 
 
 ### How To
-+ Visit YouTube here for the workflow video: 
++ Visit YouTube here for the workflow video: https://www.youtube.com/watch?v=6BFdTKDuPvA
 
 ## **/AFrame Components/tree-builder-points-component.js**
 This is an AFrame DEMO component that
