@@ -228,7 +228,7 @@ def getNaip( minLon, minLat, maxLon, maxLat, crs, nx, ny ):
     }
     resp = requests.get( IMAGE_SERVER, params=params, timeout=120 )
     resp.raise_for_status()
-    with open( "naip_5070_clip.png", "wb" ) as f:
+    with open( f"naip_{ crs }_clip.png", "wb" ) as f:
         f.write( resp.content )
     print( f"NAIP imagery downloaded to your folder in EPSG: { crs }." )
     reviseTreelist()
@@ -369,3 +369,4 @@ def poll_process_status( url, interval=30, timeout=600, pollName='' ):
 
 
 getProjectID()
+
